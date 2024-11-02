@@ -1,0 +1,809 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Верхний хедер */
+.header-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); /* Тень для верхнего хедера */
+    padding: 10px 0;
+    z-index: 1000; /* Поверх остальных элементов */
+}
+
+/* Нижний хедер */
+.header-bottom {
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    margin-top: 60px;
+}
+
+/* Контейнер */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap; /* Позволяет переносу элементов на новую строку */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* При наведении */
+.menu a:hover {
+    color: #ffa500;
+}
+
+/* Адаптивный стиль для переноса меню вниз */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Контейнеры располагаются друг под другом */
+        align-items: flex-start;
+    }
+
+    .menu {
+        justify-content: flex-start; /* Меню выровнено по левому краю */
+        gap: 10px;
+    }
+
+    .menu li {
+        margin-bottom: 10px; /* Отступы между пунктами меню */
+    }
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #333;
+}
+
+.order-call-btn {
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.order-call-btn:hover {
+    background-color: #ff8c00;
+}
+
+/* Логотип и меню */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #ffa500;
+}
+
+/* Блок с фоновым изображением и затемнением */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Занимает весь экран */
+    background-image: url('../img/background.jpg'); /* Путь к картинке */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнение с прозрачностью */
+    z-index: 1;
+}
+
+/* Контент внутри hero */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Поверх затемнения */
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: rgb(255, 166, 0);
+}
+/* Стили для раздела "Наши преимущества" */
+.advantages {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.advantages-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-bottom: 5%;
+}
+
+.advantages-header h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #969696; /* Светло-серый фон при наведении */
+}
+
+.advantages-list {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.advantage {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 150px;
+}
+
+.advantage img {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 15px;
+}
+
+.advantage p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+/* Стили для секции "О нас" */
+.about-us {
+    padding: 40px 20px; /* Отступы сверху и снизу */
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Выровнять заголовок по левому краю */
+}
+
+.about-us p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333; /* Цвет текста */
+}
+
+.lower {
+    font-size: 0.8em;
+}
+
+/* Секция подписки на всю ширину */
+.subscription {
+    background-color: #ffa500;
+    padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Контейнер для ограниченного контента */
+.subscription-content {
+    max-width: 1200px; /* Ограничение ширины */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы по бокам для небольших экранов */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Текст и форма подписки */
+.subscription-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 60px;
+    color: #fff;
+}
+
+.subscription-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subscription-form input,
+.subscription-form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+}
+
+.subscription-form input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.subscription-form input {
+    width: 250px;
+}
+
+.subscription-form button {
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px;
+}
+
+.subscription-form button:hover {
+    background-color: #ddd;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    font-size: 1em;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #ff8c00;
+}
+
+/* Секция каталога */
+.catalog {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.catalog h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Кнопки фильтрации */
+.catalog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: white; /* Белый фон для неактивных кнопок */
+    color: #000; /* Оранжевый текст */
+    border: 0px solid #ffa500; /* Оранжевая граница */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #ffedcc; /* Светлый фон при наведении */
+}
+
+.filter-button.active {
+    background-color: #ffa500; /* Оранжевый фон для активной кнопки */
+    color: white; /* Белый текст для активной кнопки */
+    border: 2px solid #ffa500;
+}
+
+/* Контейнер каталога */
+.catalog-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Карточка товара */
+.catalog-item {
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 300px;
+    width: calc(25% - 20px); /* Ширина карточки для 4 элементов в ряду */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Flexbox для вертикального выравнивания */
+    overflow: hidden;
+}
+
+/* Псевдоэлемент для затемнения */
+.catalog-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 0.336); /* Цвет затемнения с прозрачностью */
+    opacity: 0; /* Исходная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход */
+    z-index: 1; /* Псевдоэлемент должен быть выше содержимого карточки */
+}
+
+/* Эффект затемнения при наведении */
+.catalog-item:hover::after {
+    opacity: 1; /* Полная видимость при наведении */
+    cursor: pointer;
+}
+
+/* Флажок категории */
+.item-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #ffa500;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 0 10px 10px 0;
+    font-weight: bold;
+}
+
+/* Изображение товара */
+.catalog-item img {
+    max-width: 100%;
+    height: 150px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Обеспечивает заполнение области без искажений */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Название товара */
+.catalog-item .product-title {
+    min-height: 60px; /* Увеличенная минимальная высота для названия */
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Цена товара */
+.catalog-item .product-price {
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+    color: #333;
+    text-align: left;
+}
+
+/* Информационный текст */
+.catalog-info {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Секция консультантов */
+.consultants {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.consultants h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Контейнер для всех карточек */
+.consultants-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Каждая карточка консультанта */
+.consultant {
+    min-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(33.33% - 20px); /* Три карточки в ряд */
+    align-items: center;
+}
+
+/* Изображение консультанта */
+.consultant img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Текстовая информация о консультанте */
+.consultant-text {
+    flex: 1;
+    text-align: left;
+}
+
+.consultant-text h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.consultant-text p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+/* Кнопка */
+.contact-button {
+    background-color: #ffa500;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ff8c00;
+}
+
+/* Секция компаний */
+.companies {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+.companies-list {
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.companies-list span {
+    font-size: 3em;
+    font-weight: normal;
+    color: #999;
+}
+
+/* Секция полезной информации */
+.useful-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.useful-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* Карточки статей */
+.info-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info-card {
+    min-width: 200px;
+    position: relative;
+    width: calc(25% - 15px); /* Четыре карточки в ряд */
+    overflow: hidden;
+}
+
+.info-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Затемнение на всю картинку и центрированный текст */
+.card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-text p {
+    margin: 5px 0 0;
+    font-size: 1em;
+}
+
+/* Псевдоэлемент для затемнения */
+.card-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 0.336); /* Цвет затемнения с прозрачностью */
+    opacity: 0; /* Исходная прозрачность */
+    transition: opacity 0.3s ease; /* Плавный переход */
+    z-index: 1; /* Псевдоэлемент должен быть выше содержимого карточки */
+}
+
+/* Эффект затемнения при наведении */
+.card-text:hover::after {
+    opacity: 1; /* Полная видимость при наведении */
+    cursor: pointer;
+}
+
+/* Общий стиль футера */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    color: #777;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Блоки футера */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    color: #777;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Основная информация слева */
+.footer-section.main-info {
+    flex: 2; /* Занимает больше места */
+    max-width: 100%; /* Ограничиваем максимальную ширину для основной информации */
+}
+
+/* Остальные секции справа */
+.footer-sections-right {
+    display: flex;
+    flex: 3; /* Занимает оставшееся пространство */
+    justify-content: space-between;
+    width: 60%; /* Контролируем ширину блока справа */
+}
+
+/* Общий стиль футера */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    color: #777;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Левый блок */
+.footer-left {
+    max-width: 30%;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Правый блок */
+.footer-right {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* Стили секций в правом блоке */
+.footer-section h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.footer-section a:hover {
+    color: #333;
+}
+
+/* Копирайт в нижней части */
+.footer-copyright {
+    text-align: left;
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 10px;
+}
